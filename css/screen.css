@@ -44,6 +44,7 @@ a:hover { color: #ff0061; }
 .btn-blue { display: inline-block; vertical-align: top; font-size: 21px; color: white; font-family: "Unit-Regular", Arial, sans-serif; background: #08bcf8; position: relative; line-height: 1; width: 327px; padding: 30px 20px 29px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; }
 .btn-blue:hover { background: #047196; }
 .btn-blue:active { top: 1px; }
+.btn-blue.js-more-btn.is-active { display: none; }
 
 .out { min-width: 1200px; position: relative; }
 
@@ -83,10 +84,11 @@ a:hover { color: #ff0061; }
 .nav li a.is-drop.is-active:after, .nav li a.is-drop:hover:after { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; visibility: visible; }
 .nav li a.is-drop.is-active:before, .nav li a.is-drop.is-active:after { -ms-transform: rotate(-180deg); -webkit-transform: rotate(-180deg); transform: rotate(-180deg); }
 
-.items { text-align: center; font-size: 0; padding: 21px 0 130px; }
+.items { text-align: center; font-size: 0; padding: 21px 0 36px; }
+.items .btn { margin: 0 0 94px; }
 .items__inner { text-align: left; margin-bottom: 50px; }
 .items__inner .item span { min-height: 50px; }
-.items__hide { max-height: 0; overflow: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: max-height 0.3s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1); -o-transition: max-height 0.3s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1); -webkit-transition: max-height 0.3s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1); transition: max-height 0.3s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1); }
+.items__hide { max-height: 0; overflow: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: max-height 1s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1); -o-transition: max-height 1s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1); -webkit-transition: max-height 1s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1); transition: max-height 1s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1); }
 .items__hide.is-active { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; max-height: 10000px; }
 .items__hide.is-active .item { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -moz-transition: -moz-transform 0.15s ease 0.16s, opacity 0.15s ease 0.16s; -o-transition: -o-transform 0.15s ease 0.16s, opacity 0.15s ease 0.16s; -webkit-transition: -webkit-transform 0.15s ease, opacity 0.15s ease; -webkit-transition-delay: 0.16s, 0.16s; transition: transform 0.15s ease 0.16s, opacity 0.15s ease 0.16s; }
 .items__hide .item { -moz-transition: -moz-transform 0.05s ease, opacity 0.05s ease; -o-transition: -o-transform 0.05s ease, opacity 0.05s ease; -webkit-transition: -webkit-transform 0.05s ease, opacity 0.05s ease; transition: transform 0.05s ease, opacity 0.05s ease; -ms-transform: scale(0.8); -webkit-transform: scale(0.8); transform: scale(0.8); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }

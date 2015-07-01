@@ -34,6 +34,7 @@ head.ready(function() {
 	//more
 	$('.js-more-btn').on('click', function() {
 		$('.js-more').addClass('is-active');
+		$(this).addClass('is-active');
 		return false;
 	});
 });

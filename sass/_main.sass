@@ -152,7 +152,9 @@
 .items
 	text-align: center
 	font-size: 0
-	padding: 21px 0 130px 
+	padding: 21px 0 36px 
+	.btn
+		margin: 0 0 94px 
 	&__inner
 		text-align: left
 		margin-bottom: 50px
@@ -163,7 +165,7 @@
 		max-height: 0
 		overflow: hidden
 		+opacity(0)
-		+transition(max-height 0.3s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1))
+		+transition(max-height 1s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1))
 		&.is-active
 			+opacity(1)
 			max-height: 10000px 		
