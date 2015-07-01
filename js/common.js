@@ -35,6 +35,10 @@ head.ready(function() {
 	$('.js-more-btn').on('click', function() {
 		$('.js-more').addClass('is-active');
 		$(this).addClass('is-active');
+		$('html, body').stop().animate({
+		    'scrollTop': $('.items').offset().top}, 500);
+		
+
 		return false;
 	});
 	//validate
