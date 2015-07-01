@@ -37,4 +37,32 @@ head.ready(function() {
 		$(this).addClass('is-active');
 		return false;
 	});
+	//validate
+	var form_validate = $('.js-validate');
+
+		if (form_validate.length) {
+
+		form_validate.each(function () {
+
+			var form_this = $(this);
+			$.validate({
+				form : form_this,
+				validateOnBlur : false,
+				borderColorOnError : false,
+				scrollToTopOnError : false,
+
+				onSuccess : function() {
+					form_this.addClass('is-success');
+					// ajaxSubmit(form_this);
+					return false;
+				},
+
+				onError : function () {
+					form_this.addClass('is-error');
+				},
+			});
+
+		});
+
+	 };
 });

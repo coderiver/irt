@@ -18,3 +18,38 @@
 	&.js-more-btn
 		&.is-active
 			display: none
+	&_small		
+		padding: 20px 20px 19px
+		width: 243px
+.input
+	width: 100%
+	padding: 23px 16px 22px
+	border: 1px solid rgba(141, 141, 141, 0.46)
+	+box
+	font-size: 18px
+	+unit
+	+transition(border-color 0.3s)
+	+placeholder-color(#8d8b8b)
+	&:focus
+		border-color: #292929
+	&.error
+		border-color: #FE0000
+.textarea
+	width: 100%
+	padding: 23px 16px 22px
+	border: 1px solid rgba(141, 141, 141, 0.46)
+	+box
+	font-size: 18px
+	+unit
+	+placeholder-color(#8d8b8b)
+	max-width: 100%
+	height: 96px
+	&:focus
+		border-color: #292929
+	&.is-question		
+		height: 134px
+	&.error
+		border-color: #FE0000
+.help-block
+	display: none
+	font-size: 0

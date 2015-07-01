@@ -43,7 +43,7 @@
 		left: 0
 		right: 0
 		z-index: 1 
-	&.is-active
+	&.is-active, &_white
 		background: #fff 
 		.logo
 			span
@@ -54,6 +54,12 @@
 					color: #292929
 					&.is-active, &:hover
 						color: #ff0061
+					&.is-drop
+						padding-right: 15px
+						&:before
+							+arr(10, 7, #292929, b)
+						&:after
+							+arr(10, 7, #ff0061, b)
 .menu
 	position: absolute
 	top: 100%
@@ -153,7 +159,7 @@
 	text-align: center
 	font-size: 0
 	padding: 21px 0 36px 
-	.btn
+	.btn-blue
 		margin: 0 0 94px 
 	&__inner
 		text-align: left
@@ -165,7 +171,7 @@
 		max-height: 0
 		overflow: hidden
 		+opacity(0)
-		+transition(max-height 1s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1))
+		+transition(max-height 1s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1))
 		&.is-active
 			+opacity(1)
 			max-height: 10000px 		
@@ -257,3 +263,152 @@
 			+transition(color 0.3s)
 			&:hover
 				color: #ff0061
+				
+.map
+	position: relative
+	&__block
+		width: 100%
+		height: 875px
+		position: relative
+		z-index: 10
+	&__box
+		position: absolute
+	&__inner
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+	&__info
+		max-width: 1140px
+		margin: 0 auto
+		position: relative
+	&__box
+		position: absolute
+		left: 10px
+		top: 80px
+		background-color: #FFF
+		max-width: 360px
+		width: 100%
+		z-index: 15 
+		padding: 36px 39px 39px
+		+box 
+		li
+			font-size: 26px
+			+unit
+			line-height: 38px
+			a
+				color: #ff0061 
+	&__title
+		font-size: 42px
+		+bold
+		line-height: 1.2
+		margin-bottom: 17px
+		display: block
+		
+.contacts
+	padding: 53px 0 116px 
+.form
+	max-width: 740px
+	margin: 0 auto 
+	&__title
+		font-size: 64.02px
+		+bold
+		letter-spacing: -0.01em 
+		line-height: 1
+		text-shadow: 1.5px 2.6px 136px rgba(0, 0, 0, 0.22)
+		display: block
+		text-align: center
+		margin-bottom: 45px
+	&__row
+		+clr
+		position: relative
+		font-size: 0
+	&__inputs, &__accounts
+		width: 370px
+		display: inline-block
+		vertical-align: middle
+	&__or
+		width: 20px
+		position: absolute
+		top: 10px
+		bottom: 10px
+		left: 50%
+		margin-left: -10px
+		+vertical
+		overflow: hidden
+		span
+			display: inline-block
+			vertical-align: middle
+			width: 100%
+			font-size: 16px
+			line-height: 37px
+			+unit
+			position: relative
+			&:before, &:after
+				content: "" 
+				position: absolute
+				left: 50%
+				width: 1px
+				height: 1000px
+				background: #000
+				+opacity(0.27) 
+			&:before
+				bottom: 100%
+			&:after
+				top: 100%
+	.field
+		max-width: 325px
+		padding: 10px 0
+	&__accounts
+		ul
+			padding: 0 0 0 47px 
+			li
+				padding: 18px 0 
+		a
+			position: relative
+			padding: 13px 0 13px 60px 
+			font-size: 18px
+			color: #0fb4f1
+			line-height: 1
+			+unit
+			display: inline-block
+			+transition(color 0.3s)
+			&:hover
+				color: #ff0061
+				i
+					background: #ff0061 
+			i
+				position: absolute
+				top: 50%
+				left: 0
+				margin-top: -22px
+				width: 44px
+				height: 44px
+				border-radius: 50%
+				background-color: #0FB4F1
+				+vertical
+				+transition(background 0.3s)
+				&:after
+					position: absolute
+					content: "" 
+			&.is-fb
+				i
+					&:after
+						top: 13px
+						left: 18px
+						+svg(fb-white, 9, 19)
+			&.is-in
+				i
+					&:after
+						top: 11px
+						left: 14px
+						+svg(in-white, 18, 19)
+	&__areas
+		font-size: 0
+		padding: 15px 0 28px 
+	&__textarea
+		padding: 10px 0 15px 
+	&__btn
+		text-align: center
+				
