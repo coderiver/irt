@@ -14,7 +14,7 @@ head.ready(function() {
 	// $(window).scroll(function(){
 	//     scrollFixedElements()
 	// });
-	
+	//nav
 	$('.js-menu-btn').on('click', function() {
 		$(this).parents('.js-menu-block').find('.js-menu').toggleClass('is-active');
 		$(this).toggleClass('is-active');
@@ -30,5 +30,10 @@ head.ready(function() {
 		$(this).on('click', function(event) {
 			event.stopPropagation();	
 		});
+	});
+	//more
+	$('.js-more-btn').on('click', function() {
+		$('.js-more').addClass('is-active');
+		return false;
 	});
 });

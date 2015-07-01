@@ -62,7 +62,7 @@
 	background: #fff
 	padding: 0 0 50px
 	font-size: 0 
-	+transition(transform 0.3s cubic-bezier(0.28, 0.11, 0.32, 1),background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1),opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1))
+	+transition(transform 0.3s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1))
 	-webkit-transform: translate3d(0, -100%, 0) 
 	-moz-transform: translate3d(0, -100%, 0) 
 	-ms-transform: translate3d(0, -100%, 0) 
@@ -155,7 +155,26 @@
 	padding: 21px 0 130px 
 	&__inner
 		text-align: left
-		margin-bottom: 93px
+		margin-bottom: 50px
+		.item
+			span				
+				min-height: 50px 
+	&__hide
+		max-height: 0
+		overflow: hidden
+		+opacity(0)
+		+transition(max-height 0.3s cubic-bezier(0.28, 0.11, 0.32, 1), background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1), opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1))
+		&.is-active
+			+opacity(1)
+			max-height: 10000px 		
+			.item
+				+scale(1)
+				+opacity(1)
+				+transition(transform .15s ease .16s, opacity .15s ease .16s)
+		.item
+			+transition(transform .05s ease, opacity .05s ease)
+			+scale(0.8)
+			+opacity(0)
 .item
 	width: 25%
 	padding: 10px
@@ -181,6 +200,8 @@
 			color: #07090D
 			display: block
 			+transition(color 0.3s)
+			width: 99%
+			margin-bottom: 18px
 	&__img
 		position: relative
 		margin-bottom: 10px
