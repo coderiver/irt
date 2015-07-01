@@ -1,1 +1,236 @@
-// Normally mainpage styles
+.out
+	min-width: 1200px
+	position: relative
+.video
+	background: url(../img/video.jpg) no-repeat
+	+cover
+	height: 966px 
+	position: relative
+	&:before
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background: rgba(0, 0, 0, 0.15) 
+		content: "" 
+	&__title
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		text-align: center
+		font-size: 118px
+		color: #FFF
+		text-shadow: 1.5px 2.6px 136px rgba(0, 0, 0, 0.22)
+		+bold
+		line-height: 112px
+		letter-spacing: -0.01em 
+		margin-top: -112px
+.inner
+	+clr
+	max-width: 1140px
+	margin: 0 auto 
+	z-index: 5 
+	position: relative
+.header
+	padding: 11px 0
+	position: relative
+	z-index: 20 
+	&_absolute
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 1 
+	&.is-active
+		background: #fff 
+		.logo
+			span
+				color: #292929
+		.nav
+			li
+				a
+					color: #292929
+					&.is-active, &:hover
+						color: #ff0061
+.menu
+	position: absolute
+	top: 100%
+	left: 0
+	right: 0
+	background: #fff
+	padding: 0 0 50px
+	font-size: 0 
+	+transition(transform 0.3s cubic-bezier(0.28, 0.11, 0.32, 1),background-color 0.2s cubic-bezier(0.28, 0.11, 0.32, 1),opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1))
+	-webkit-transform: translate3d(0, -100%, 0) 
+	-moz-transform: translate3d(0, -100%, 0) 
+	-ms-transform: translate3d(0, -100%, 0) 
+	-o-transform: translate3d(0, -100%, 0) 
+	transform: translate3d(0, -100%, 0) 
+	+opacity(0)
+	z-index: -1 
+	&.is-active
+		-webkit-transform: translate3d(0, 0, 0) 
+		-moz-transform: translate3d(0, 0, 0) 
+		-ms-transform: translate3d(0, 0, 0) 
+		-o-transform: translate3d(0, 0, 0) 
+		transform: translate3d(0, 0, 0) 
+		+opacity(1)
+		z-index: 1 
+		.item
+			+scale(1)
+			+opacity(1)
+			+transition(transform .15s ease .16s, opacity .15s ease .16s)
+	.item
+		+transition(transform .05s ease, opacity .05s ease)
+		+scale(0.8)
+		+opacity(0)
+.logo
+	font-size: 0
+	float: left
+	div
+		padding: 16px
+		border-radius: 50%
+		background: #fff
+		display: inline-block
+		vertical-align: middle
+		margin-right: 16px
+		img
+			width: 40px
+			height: 40px
+	span
+		display: inline-block
+		vertical-align: middle
+		+med
+		font-size: 21px
+		color: #fff 
+		
+.nav
+	float: right
+	font-size: 0
+	padding: 22px 10px 21px 0 
+	li
+		display: inline-block
+		vertical-align: top
+		margin: 0 0 0 40px 
+		a
+			display: inline-block
+			+reg
+			font-size: 21px
+			color: #fff 
+			position: relative
+			+transition(color 0.3s)
+			&.is-active, &:hover
+				color: #ff0061
+			&.is-drop
+				padding-right: 15px
+				&:before, &:after
+					position: absolute
+					top: 50%
+					right: 0
+					+transition(opacity 0.3s, visibility 0.3s, transform 0.3s)
+					content: "" 
+					margin: -3px 0 0 
+					+will
+				&:before
+					+arr(10, 7, #fff, b)
+				&:after
+					+opacity(0)
+					visibility: hidden
+					+arr(10, 7, #ff0061, b)
+				&.is-active, &:hover
+					&:before
+						+opacity(0)
+						visibility: hidden
+					&:after
+						+opacity(1)
+						visibility: visible
+				&.is-active
+					&:before, &:after
+						+rotate(-180)
+.items
+	text-align: center
+	font-size: 0
+	padding: 21px 0 130px 
+	&__inner
+		text-align: left
+		margin-bottom: 93px
+.item
+	width: 25%
+	padding: 10px
+	+box
+	display: inline-block
+	vertical-align: top
+	&__inner
+		display: block
+		font-size: 0
+		&:hover
+			span
+				color: #ff0061 
+			.item__img
+				&:before
+					visibility: visible
+					+opacity(1)
+		img
+			width: 100%
+		span
+			+unit
+			font-size: 21px
+			line-height: 25px
+			color: #07090D
+			display: block
+			+transition(color 0.3s)
+	&__img
+		position: relative
+		margin-bottom: 10px
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba(0, 0, 0, 0.2)
+			visibility: hidden
+			+opacity(0) 
+			+transition(opacity 0.3s, visibility 0.3s)
+			+will
+			content: "" 
+			
+.footer
+	font-size: 0
+	padding: 25px 0 45px
+	border-top: 1px solid #e8e8e8  
+	li
+		display: inline-block
+		vertical-align: middle
+	p
+		float: left
+		color: #424242
+		+opacity(0.79)
+		font-size: 14px
+		+unit
+		margin-right: 25px
+		padding: 2px 0 0 
+	&__web
+		float: left
+		padding: 1px 0 
+		li
+			margin: 0 0 0 20px 
+		a
+			&.is-fb
+				+svg(fb, 8, 18)
+			&.is-u2b
+				+svg(u2b, 24, 18)
+	&__nav
+		float: right
+		li
+			margin: 0 0 0 30px 
+		a
+			font-size: 20px
+			color: #292929
+			+unit
+			line-height: 1
+			+transition(color 0.3s)
+			&:hover
+				color: #ff0061

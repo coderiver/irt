@@ -14,6 +14,21 @@ head.ready(function() {
 	// $(window).scroll(function(){
 	//     scrollFixedElements()
 	// });
-
-	console.log($('body').html());
+	
+	$('.js-menu-btn').on('click', function() {
+		$(this).parents('.js-menu-block').find('.js-menu').toggleClass('is-active');
+		$(this).toggleClass('is-active');
+		$(this).parents('.js-menu-block').toggleClass('is-active');
+		return false;
+	});
+	$('.js-menu').each(function() {
+		$('body').on('click', function() {
+			$('.js-menu').removeClass('is-active');
+			$('.js-menu-block').removeClass('is-active');
+			$('.js-menu-btn').removeClass('is-active');
+		});
+		$(this).on('click', function(event) {
+			event.stopPropagation();	
+		});
+	});
 });
