@@ -36,13 +36,13 @@
 .header
 	padding: 11px 0
 	position: relative
-	z-index: 20 
+	z-index: 100 
 	&_absolute
 		position: absolute
 		top: 0
 		left: 0
 		right: 0
-		z-index: 1 
+		z-index: 100
 	&.is-active, &_white
 		background: #fff 
 		.logo
@@ -318,11 +318,11 @@
 		text-shadow: 1.5px 2.6px 136px rgba(0, 0, 0, 0.22)
 		display: block
 		text-align: center
-		margin-bottom: 45px
 	&__row
 		+clr
 		position: relative
 		font-size: 0
+		margin: 45px 0 0 
 	&__inputs, &__accounts
 		width: 370px
 		display: inline-block
@@ -411,3 +411,58 @@
 	&__btn
 		text-align: center
 				
+.restaurants
+	background: url(../img/restaurants-head.jpg) no-repeat 
+	+cover
+	text-align: center
+	position: relative
+	padding: 160px 0 
+	+box
+	height: 1153px 
+	&:before
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background: rgba(0, 0, 0, 0.1)
+		content: ""  
+	&__title
+		max-width: 550px
+		display: block
+		margin: 0 auto 30px
+		+bold
+		font-size: 106px
+		line-height: 1
+		color: #fff 
+		position: relative
+		z-index: 1
+	p
+		font-size: 26px
+		line-height: 35px
+		color: #fff
+		+unit 
+		position: relative
+		z-index: 1
+
+.gallery
+	text-align: center
+	padding: 90px 0 0 
+	&__title
+		font-size: 72px
+		+bold
+		display: block
+		line-height: 53px
+		letter-spacing: -0.01em 
+		margin-bottom: 20px
+	p
+		color: #020202
+		font-size: 30px
+		line-height: 35px
+		+unit
+		margin-bottom: 26px
+		
+.r-form
+	background-color: #F3F3F3
+.r-content
+	padding-bottom: 77px

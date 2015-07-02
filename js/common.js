@@ -68,5 +68,11 @@ head.ready(function() {
 
 		});
 
-	 };
+	};
+	//sliders
+	$('.js-slider').slick({
+		fade: true,
+		dots: true,
+		arrows: false
+	});
 });
