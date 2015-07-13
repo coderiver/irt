@@ -65,6 +65,11 @@ head.ready(function() {
 		dots: true,
 		arrows: false
 	});
+	$('.js-int-slider').slick({
+		fade: true,
+		dots: true,
+		arrows: true
+	});
 	//table nav
 	//smoothscroll
 	if ($('.js-t-nav').length > 0) {
