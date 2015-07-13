@@ -73,3 +73,137 @@
 .help-block
 	display: none
 	font-size: 0
+
+//btn-check
+.btn-check
+	display: inline-block
+	vertical-align: top
+	+user-select(none)
+	cursor: pointer
+	input
+		display: none
+		&:checked + span
+			background: #6FCC27
+			&:before
+				left: 47px 
+	span
+		position: relative
+		display: block
+		width: 80px
+		height: 35px
+		border-radius: 18px
+		background: #DEDEDE
+		+transition(background 0.25s ease)
+		&:before
+			content: "" 
+			position: absolute
+			top: 3px
+			left: 3px
+			width: 30px
+			height: 29px
+			+box-shadow(0 4px 10px rgba(0, 0, 0, 0.4))
+			background-color: #FFF
+			border-radius: 50%
+			+transition(left 0.25s ease)
+//range
+.range
+	padding: 16px 15px 15px
+.ui-slider
+	position: relative
+	text-align: left
+	width: 100%
+	height: 4px
+	border-radius: 2px
+	min-width: 127px 
+	cursor: pointer
+	&:before
+		height: 4px
+		position: absolute
+		top: 0
+		bottom: 0
+		left: -14px
+		right: -14px
+		border-radius: 2px
+		background-color: #AEAEAE
+		content: "" 
+	&-handle
+		position: absolute
+		height: 4px
+		cursor: pointer
+		&:before
+			content: "" 
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 28px
+			height: 28px
+			margin: -14px 0 0 -14px 
+			background: #fff
+			border-radius: 50%
+			+box-shadow(0 4px 10px rgba(0, 0, 0, 0.4)) 
+.range-color
+	padding: 16px 15px 15px
+	.ui-slider	
+		&:before
+			background-image: -moz-linear-gradient(right, rgba(68, 180, 0, 0.98) 0%, rgba(68, 180, 0, 0.98) 0%, rgba(111, 204, 39, 0.98) 18%, rgba(255, 132, 0, 0.98) 74%, rgba(252, 0, 78, 0.98) 100%)
+			background-image: -o-linear-gradient(right, rgba(68, 180, 0, 0.98) 0%, rgba(68, 180, 0, 0.98) 0%, rgba(111, 204, 39, 0.98) 18%, rgba(255, 132, 0, 0.98) 74%, rgba(252, 0, 78, 0.98) 100%)
+			background-image: -webkit-linear-gradient(right, rgba(68, 180, 0, 0.98) 0%, rgba(68, 180, 0, 0.98) 0%, rgba(111, 204, 39, 0.98) 18%, rgba(255, 132, 0, 0.98) 74%, rgba(252, 0, 78, 0.98) 100%)
+			background-image: linear-gradient(to left, rgba(68, 180, 0, 0.98) 0%, rgba(68, 180, 0, 0.98) 0%, rgba(111, 204, 39, 0.98) 18%, rgba(255, 132, 0, 0.98) 74%, rgba(252, 0, 78, 0.98) 100%)
+			
+//select
+
+.select
+	position: relative
+	cursor: pointer
+	+unit
+	font-size: 15px
+	letter-spacing: -0.01em 
+	color: #292929 
+	+user-select(none)
+	select
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+	&.is-active
+		.select__text
+			&:after
+				+rotate(-180)
+	&__text
+		position: relative
+		display: block
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		padding: 0 30px 0 13px
+		+box 
+		height: 33px
+		line-height: 33px
+		z-index: 2 
+		background: #fff 
+		&:after
+			content: ""
+			position: absolute
+			right: 10px
+			top: 50%
+			margin-top: -3px
+			+arr(10, 7, #292929, b)
+			+transition(transform 0.3s)
+	&__list
+		position: absolute
+		display: none
+		left: 0
+		right: 0
+		top: 100%
+		z-index: 200
+		background: #fff 
+		li
+			padding: 0 13px 8px
+			cursor: pointer
+			line-height: 1
+			text-align: left
+			&:hover
+				color: #6FCC27
+			&.is-active
+				display: none

@@ -118,7 +118,57 @@ a
 	letter-spacing: -0.01em 
 	line-height: 1.2
 	display: block
+
+.c-title
+	font-size: 90px
+	letter-spacing: -0.01em 
+	line-height: 100px
+	+bold
+	display: block
+	i
+		+medit
+
+.arr-bot
+	width: 119px
+	height: 119px
+	background-color: #F6163C
+	border-radius: 50%
+	+box-shadow(-20px 34.6px 29px rgba(0, 0, 0, 0.35))
+	position: relative
+	display: block
+	&:before
+		position: absolute
+		top: 50%
+		left: 50%
+		content: "" 
+		+svg(arr-bot, 56, 59)
+		margin: -27px 0 0 -28px 
+
+.c-fs50
+	+bold
+	font-size: 50px
+	display: block
+	line-height: 1.2
 	
+.link-more
+	display: inline-block
+	font-size: 21px
+	+unit
+	color: #0FB4F1
+	+transition(color 0.3s)
+	
+.c-fs34
+	+unit
+	font-size: 34px
+	display: block
+	line-height: 1.2
+
+.c-fs36
+	display: block
+	+unit
+	font-size: 36px
+	line-height: 1.2
+	text-shadow: 1.5px 2.6px 136px rgba(0, 0, 0, 0.22)
 //mix
 =will
 	will-change: opacity

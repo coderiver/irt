@@ -1090,6 +1090,7 @@
 			margin: 0 20px 
 			
 .benefits
+	overflow: hidden
 	&__items
 		+clr
 	&__item
@@ -1276,3 +1277,355 @@
 			display: inline-block
 			&.is-service
 				+svg(service, 67, 67)
+.cut
+	padding: 160px 0 0 
+.c-save
+	font-size: 0
+	max-width: 1120px
+	margin: 0 auto 79px
+	padding: 0 0 0 95px
+	+box 
+	.b-heading
+		margin: 0 0 10px 
+	&__text
+		display: inline-block
+		vertical-align: middle
+		width: 475px
+	&__img
+		display: inline-block
+		vertical-align: middle
+		width: 550px
+		text-align: center
+		position: relative
+		div
+			display: inline-block
+			position: relative
+	.arr-bot
+		position: absolute
+		top: 120px
+		right: 21px
+	.c-title
+		margin-bottom: 40px
+	hr
+		margin-bottom: 40px
+.c-win
+	font-size: 0
+	max-width: 1120px
+	margin: 0 auto 
+	position: relative
+	+clr
+	min-height: 677px 
+	img
+		position: absolute
+		bottom: 0
+		left: -30px
+	&__text
+		float: right
+		width: 570px
+		padding: 110px 0 50px 
+.c-money
+	margin-bottom: 120px 
+	&__slide
+		width: 100%
+		height: 907px
+		position: relative
+		&.is-active
+			.c-money__img
+				&.is-one
+					left: 0
+				&.is-two
+					left: 0
+	&__img
+		width: 100%
+		height: 907px
+		background-repeat: no-repeat
+		+cover
+		position: absolute
+		top: 0
+		+transition(left 1s ease)
+		&.is-one
+			left: 0
+		&.is-two
+			left: 100%
+	&__text
+		width: 740px
+		margin: 0 auto
+		padding: 50px 0  
+		.b-heading
+			text-align: center
+		hr
+			margin: 0 auto 38px 
+
+.c-more
+	width: 1140px
+	margin: 0 auto
+	font-size: 0
+	&__img
+		display: inline-block
+		vertical-align: middle
+		width: 750px
+		img
+			width: 100%
+	&__text
+		width: 320px 
+		margin: 0 60px 40px 10px 
+		display: inline-block
+		vertical-align: middle
+		
+.control
+	padding: 100px 0 0 
+	.b-heading
+		text-align: center
+	.c-fs50
+		margin-bottom: 33px
+
+.c-feedback
+	font-size: 0
+	margin: 0 auto 160px
+	width: 1120px 
+	&__text
+		width: 490px
+		display: inline-block
+		vertical-align: middle
+		margin: 0 80px 0 0 
+		p
+			font-size: 21px
+	&__img
+		width: 550px
+		display: inline-block
+		vertical-align: middle
+
+.c-command
+	font-size: 0
+	width: 1140px
+	margin: 0 auto 170px
+	&__img
+		width: 560px
+		display: inline-block
+		vertical-align: middle
+		margin: 0 20px 0 0 
+	&__text
+		display: inline-block
+		vertical-align: middle
+		width: 530px
+		p
+			font-size: 21px
+			margin-bottom: 32px
+			
+.c-return
+	font-size: 0
+	width: 1140px
+	margin: 0 auto 160px
+	&__text
+		display: inline-block
+		vertical-align: middle
+		width: 440px
+		margin: 0 110px 0 10px
+	&__img
+		display: inline-block
+		vertical-align: middle
+		width: 580px
+
+.c-send
+	text-align: center
+	margin-bottom: 128px
+	.btn-blue
+		padding: 38px 20px 38px
+		width: 399px 
+		
+.calculate
+	padding: 67px 0 
+	background-color: #F3F3F3
+	&__inner
+		max-width: 1120px
+		margin: 0 auto
+		+clr 
+	&__settings
+		width: 440px 
+		float: left
+	&__heading
+		font-size: 66px
+		text-shadow: 1.5px 2.6px 136px rgba(0, 0, 0, 0.22)
+		+bold
+		display: block
+		text-align: center
+		letter-spacing: -0.01em 
+		line-height: 1.2 
+	&__section
+		border-top: 4px solid #292929
+		padding: 15px 0
+	&__sets
+		padding: 0 0 20px  
+	&__info
+		float: right
+		width: 630px 
+		.c-fs36
+			width: 250px 
+	&__select
+		float: right
+		width: 128px
+	&__titles
+		text-align: right
+		font-size: 0
+		padding: 0 0 12px 
+		margin: -35px 0 0 
+	&__table-title
+		font-size: 20px
+		+unit
+		text-shadow: 1.5px 2.6px 136px rgba(0, 0, 0, 0.22)
+		line-height: 1.2
+		position: relative
+		padding: 11px 25px 11px 0
+		display: inline-block
+		width: 190px
+		+box
+		&.is-irt
+			padding-right: 55px
+			&:before, &:after
+				content: "" 
+				position: absolute
+			&:before
+				width: 48px
+				height: 46px
+				background-color: #FFF
+				border-radius: 50%
+				top: 0
+				right: 0
+			&:after
+				+svg(logo, 26, 26)
+				top: 10px
+				right: 11px
+	&__btn
+		text-align: center
+		padding: 47px 0 10px
+		.btn-blue
+			font-size: 20px
+			width: 333px
+			padding: 20px 
+.set
+	+clr
+	padding: 9px 12px 9px 0 
+	&__text
+		float: left
+		font-size: 19px
+		+unit
+		line-height: 1
+		padding: 8px 0
+	&__right
+		float: right
+	&__label
+		font-size: 16px
+		+unit
+		display: inline-block
+		vertical-align: middle
+		padding: 10px 15px 9px
+		line-height: 1 
+	.range, .range-color, .btn-check
+		display: inline-block
+		vertical-align: middle
+
+.c-services
+	.c-fs34
+		max-width: 180px
+		margin-bottom: 30px
+
+.c-service
+	padding: 2px 100px 3px 58px
+	position: relative
+	+box
+	min-height: 46px 
+	margin: 0 0 28px
+	span, small
+		display: block
+		+unit
+		letter-spacing: -0.01em 
+		line-height: 1.2
+	span
+		font-size: 19px
+	small
+		font-size: 16px
+		color: #AEAEAE
+	i
+		position: absolute
+		top: 50%
+		left: 1px
+		margin: -23px 0 0 
+		&.is-music
+			+svg(music, 46, 46)
+		&.is-gift
+			+svg(gift, 46, 46)
+		&.is-brand
+			+svg(brand, 46, 46)
+		&.is-food
+			+svg(food, 46, 46)
+		&.is-prod
+			+svg(prod, 46, 46)
+		&.is-game
+			+svg(game, 46, 46)
+	.btn-check
+		top: 3px
+		right: 10px
+		position: absolute
+
+.c-blocks
+	font-size: 0
+	margin: 0 0 -10px 
+.c-info
+	width: 33.3%
+	display: inline-block
+	vertical-align: top
+	padding: 0 0 10px 
+	small, span
+		display: block
+		+unit
+		line-height: 26px
+	small
+		font-size: 16px
+		color: #AEAEAE
+	span
+		font-size: 24px
+
+.c-table
+	tr
+		&.is-pb
+			td
+				padding-bottom: 24px 
+		&.is-result
+			td
+				font-size: 21px
+				padding-bottom: 20px
+				&.is-non, &.is-irt
+					+bold
+		&.is-total
+			td	
+				&.is-name			
+					font-size: 21px
+				&.is-non, &.is-irt
+					font-size: 34px
+					+bold
+	td
+		font-size: 15px
+		+unit
+		border-top: 1px solid rgba(91, 91, 91, 0.17) 
+		letter-spacing: -0.01em
+		padding: 4px 0 5px
+		line-height: 1.2
+		vertical-align: middle
+		&.is-name
+			width: 250px
+		&.is-non
+			width: 165px
+			text-align: right
+			color: #828282 
+			padding: 0 25px 0 0
+		&.is-irt
+			width: 180px
+			text-align: right
+			background-color: rgba(111, 204, 39, 0.15)
+			padding: 0 10px 0 0 
+	&_bt
+		border-top: 2px solid #292929 
+		td
+			border-top: none
+			padding-top: 6px
+			padding-bottom: 6px  
