@@ -1700,27 +1700,335 @@
 	color: #FFF
 	background: url("../img/int-surf.jpg") no-repeat
 	+cover
-	&__title
-		position: absolute
-		top: 50%
-		left: 50%
-		font-size: 124px
-		line-height: 118px
-		+bold
 	&__text
-		font-size: 32px
-		+unit
+		position: absolute
+		top: 35%
+		left: 0
+		right: 0
+		span
+			font-size: 124px
+			line-height: 118px
+			+bold
+		p	
+			font-size: 32px
+			+unit
 .interactive
+	border-bottom: 1px solid #e3e3e3
 	&__item
-		width: 1120px
-		border-bottom: 1px solid #e3e3e3
+		position: relative
+		width: 980px
+		height: auto
+		margin: 0 auto
 	&__title
 		text-align: center
+		margin: 20px 0
 		h3
 			font-size: 72px
 			color: #000
 			+bold
 	&__text
+		margin: 0 120px
+		padding-bottom: 90px
 		font-size: 28px
 		color: #292929
 		+unit
+	.slick-prev
+		left: -75px
+		+s(int-prev)
+		&:before
+			content: ""
+	.slick-next
+		right: -75px
+		+s(int-next)
+		&:before
+			content: ""
+
+.media
+	margin-bottom: 150px
+	&__title
+		margin-top: 50px
+		font-size: 60px
+		color: #292929
+		+bold
+	&__item
+		color: #292929
+		span
+			display: block
+			margin: 45px 0
+			font-size: 56px
+			+reg
+	&__wrap
+		margin: 0 0 80px -20px
+		img, figure
+			display: inline-block
+			vertical-align: top
+			margin: 0 0 20px 20px
+		figure
+			a
+				cursor: pointer 
+			img
+				display: block
+				margin: 0
+		figcaption
+			display: block
+			margin: 25px 0
+			font-size: 21px
+			color: #171717
+			+unit
+
+.c-top
+	position: relative
+	height: 1140px
+	text-align: center
+	overflow: hidden
+	background: url(../img/cloud-bg.jpg) no-repeat
+	+cover
+	&__title
+		position: absolute
+		top: 40%
+		left: 0
+		right: 0
+		font-size: 122px
+		line-height: 127px 
+		color: #292929
+		+bold
+.cloud
+	&__wrap
+		padding: 85px 0
+	&__item
+		font-size: 0
+		span
+			display: inline-block
+			vertical-align: middle
+			font-size: 46px
+			color: #262626
+			+unit
+			i
+				display: inline-block
+				vertical-align: top
+				margin-right: 25px
+				&.cloud1
+					+s(cloud1)
+				&.cloud2
+					+s(cloud2)
+				&.cloud3
+					+s(cloud3)
+				&.cloud4
+					+s(cloud4)
+				&.cloud5
+					+s(cloud5)
+				&.cloud6
+					+s(cloud6)
+				&.cloud7
+					+s(cloud7)
+				&.cloud8
+					+s(cloud8)
+		p
+			display: block
+			width: 645px
+			padding-top: 30px
+			font-size: 21px
+			color: #292929
+			+unit
+		img
+			position: relative
+			margin-top: -140px
+			z-index: -100
+	&__btn
+		margin: 75px 0
+		text-align: center
+
+.h-top
+	position: relative
+	height: 1025px
+	text-align: center
+	overflow: hidden
+	background: url(../img/hardware-bg.jpg) no-repeat
+	+cover
+	&__title
+		position: absolute
+		top: 60%
+		left: 0
+		right: 0
+		font-size: 110px
+		line-height: 115px
+		color: #292929 
+		+bold
+.hardware
+	&__topper
+		padding: 100px 0
+		.mark
+			display: inline-block
+			vertical-align: top
+			width: 270px
+			text-align: center
+		.post
+			display: inline-block
+			vertical-align: top
+			width: 830px
+			color: #292929
+			span
+				font-size: 58px
+				+bold
+			p
+				padding-top: 40px
+				font-size: 28px
+				+unit
+				i
+					color: #fb0159
+				em
+					color: #39b8e8
+	&__wrapper
+		padding: 100px 0
+		background: #f6f6ee
+	&__title
+		text-align: center
+.tech
+	margin: 90px 0 0 -20px
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 265px
+		margin-left: 20px
+		h5
+			display: block
+			margin: 30px 0
+			font-size: 30px
+			+bold
+		p
+			padding-bottom: 35px
+			font-size: 14px
+			+unit
+	&__img
+		position: relative
+		height: 410px
+		img
+			position: absolute
+			bottom: 0
+	&__note
+		display: block
+		width: 200px
+		padding: 25px 0
+		border-top: 1px solid #989896
+		font-size: 16px
+		color: #ff1769
+		+unit
+		i
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px
+			+s(no-use)
+		span
+			display: inline-block
+			vertical-align: middle
+.sensors
+	&__text
+		display: inline-block
+		vertical-align: top
+		width: 270px
+		+unit
+		h5
+			font-size: 36px
+			padding-bottom: 30px
+		p
+			font-size: 21px
+			padding-bottom: 70px
+	&__img
+		display: inline-block
+		vertical-align: top
+		margin-left: 85px
+.recognition
+	margin: 0 -60px
+	&__text
+		display: inline-block
+		vertical-align: top
+		width: 455px
+		margin: 90px 60px 0
+		span
+			font-size: 46px
+			+bold
+		p
+			font-size: 24px
+			+unit
+	&__img
+		display: inline-block
+		vertical-align: top
+		width: 550px
+		margin: 0 60px 110px
+	&:last-child
+		margin-bottom: -100px
+.parts-wrap
+	background: #f5f5f5
+.parts
+	position: relative
+	width: 1120px
+	img
+		display: block
+		width: 100%
+	&__item
+		position: absolute
+		display: block
+		cursor: pointer
+		+s(parts-plus)
+		margin-left: -30px
+		margin-top: -61px
+		z-index: 5
+		&.is-active
+			+s(parts-close)
+		&.parts1
+			top: 325px
+			left: 75px
+		&.parts2
+			top: 80px
+			left: 105px
+		&.parts3
+			top: 490px
+			left: 290px
+		&.parts4
+			top: 660px
+			left: 345px
+		&.parts5
+			top: 0px
+			left: 525px
+		&.parts6
+			top: 520px
+			left: 645px
+		&.parts7
+			top: 490px
+			left: 775px
+		&.parts8
+			top: 525px
+			left: 900px
+		&.parts9
+			top: 110px
+			left: 1020px
+	&__info
+		display: none
+		position: absolute
+		top: 20px
+		left: 30px
+		background: #FFF
+		width: 310px
+		padding: 30px
+		z-index: 2
+		+box
+		+unit
+		&.is-active
+			display: block
+		span
+			font-size: 21px
+		p
+			font-size: 15px
+
+.hw-inside
+	margin-bottom: -92px
+	> .hardware__topper
+		padding-bottom: 0
+		> .inside__item
+			margin: 0 auto
+			img
+				position: relative
+				z-index: -1
+			p
+				font-size: 21px
+				+unit

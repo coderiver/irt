@@ -209,4 +209,19 @@ head.ready(function() {
 		return false;
 
 	});
+
+	// parts
+	$('body').click(function(event){
+		$(".parts__info").removeClass('is-active');
+		$(".parts__item").removeClass('is-active');
+	});
+
+	$(".parts__item").click(function(event){
+		$(this).toggleClass("is-active");
+		$(".parts__info").removeClass('is-active');
+		$(this).find(".parts__info").toggleClass("is-active");
+		event.preventDefault();
+		return false;
+	});
+
 });
