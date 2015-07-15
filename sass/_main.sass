@@ -2055,15 +2055,21 @@
 			.op-icon
 				+s(crm)
 		&.s-marketing
-			.op-icon
-				+s(s-marketing)
+			height: 915px
+			background: url("../img/s-marketing-bg.jpg") no-repeat
+			+cover
+			.operation__text
+				margin: 220px 0 0 860px 
+				color: #FFF
 		& .cms
 			.op-icon
 				+s(cms)
-			&__img
-				width: 896px
-				height: 565px
-				background: url("../img/cms-bg.png") no-repeat
+		&.add-app
+			.op-icon
+				+s(add-app)
+		&.constructor
+			.op-icon
+				+s(constructor)
 		p
 			max-width: 760px
 			margin: 0 auto
@@ -2105,6 +2111,8 @@
 				+s(baloon)
 			&.w-control
 				+s(w-control)
+			&.soc-marketing
+				+s(s-marketing)
 		h5
 			margin: 35px 0
 			font-size: 30px
@@ -2156,7 +2164,7 @@
 			left: 0
 	&__range
 		width: 620px
-		margin: 70px auto 230px 
+		margin: 70px auto 130px 
 		&.ui-slider:before
 			left: -36px
 			right: -36px
@@ -2167,3 +2175,16 @@
 			border: none 
 			box-shadow: none  
 			+s(analytics-range)
+.cms
+	&__wrap
+		width: 896px
+		height: 565px
+		padding: 50px 60px 80px
+		background: url("../img/cms-bg.png") no-repeat
+	&__img
+		width: 776px
+		height: 435px
+	&__slider
+		height: 100%
+		.slick-list
+			height: 100%
