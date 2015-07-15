@@ -88,17 +88,19 @@
 		height: 50px
 		line-height: 50px
 .slick-prev
-	left: 0
+	left: -75px
+	+s(int-prev)
 	&:before
-		content: "←"
+		content: ""
 		display: inline-block
 		vertical-align: middle
 		font-size: 61px
 		color: #fff 
 .slick-next
-	right: 0
+	right: -75px
+	+s(int-next)
 	&:before
-		content: "→"
+		content: ""
 		display: inline-block
 		vertical-align: middle
 		font-size: 61px

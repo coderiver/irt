@@ -480,14 +480,11 @@
 	padding-bottom: 77px
 	
 //TABLE
-.t-top
-	text-align: center
-	padding: 63px 0
-	height: 1049px 
+.t-top, .c-top, .h-top, .o-top
+	text-align: center 
 	+box 
 	position: relative
 	overflow: hidden
-	background: url(../img/t-top.jpg) no-repeat center bottom
 	&__title
 		display: block
 		max-width: 590px
@@ -496,7 +493,11 @@
 		+bold
 		line-height: 110px 
 		position: relative
-		
+.t-top	
+	padding: 63px 0
+	height: 1049px	
+	background: url(../img/t-top.jpg) no-repeat center bottom
+	
 .t-nav
 	font-size: 0
 	text-align: center
@@ -1643,7 +1644,6 @@
 			padding-bottom: 6px 
 
 .eco
-	color: #292929
 	&__title
 		h1
 			padding: 20px 0
@@ -1730,28 +1730,15 @@
 		margin: 0 120px
 		padding-bottom: 90px
 		font-size: 28px
-		color: #292929
 		+unit
-	.slick-prev
-		left: -75px
-		+s(int-prev)
-		&:before
-			content: ""
-	.slick-next
-		right: -75px
-		+s(int-next)
-		&:before
-			content: ""
 
 .media
 	margin-bottom: 150px
 	&__title
 		margin-top: 50px
 		font-size: 60px
-		color: #292929
 		+bold
 	&__item
-		color: #292929
 		span
 			display: block
 			margin: 45px 0
@@ -1777,10 +1764,7 @@
 			+unit
 
 .c-top
-	position: relative
 	height: 1140px
-	text-align: center
-	overflow: hidden
 	background: url(../img/cloud-bg.jpg) no-repeat
 	+cover
 	&__title
@@ -1790,7 +1774,6 @@
 		right: 0
 		font-size: 122px
 		line-height: 127px 
-		color: #292929
 		+bold
 .cloud
 	&__wrap
@@ -1828,7 +1811,6 @@
 			width: 645px
 			padding-top: 30px
 			font-size: 21px
-			color: #292929
 			+unit
 		img
 			position: relative
@@ -1839,10 +1821,7 @@
 		text-align: center
 
 .h-top
-	position: relative
 	height: 1025px
-	text-align: center
-	overflow: hidden
 	background: url(../img/hardware-bg.jpg) no-repeat
 	+cover
 	&__title
@@ -1852,7 +1831,6 @@
 		right: 0
 		font-size: 110px
 		line-height: 115px
-		color: #292929 
 		+bold
 .hardware
 	&__topper
@@ -1866,7 +1844,6 @@
 			display: inline-block
 			vertical-align: top
 			width: 830px
-			color: #292929
 			span
 				font-size: 58px
 				+bold
@@ -1883,6 +1860,8 @@
 		background: #f6f6ee
 	&__title
 		text-align: center
+		h5
+			margin: 50px 0 100px
 .tech
 	margin: 90px 0 0 -20px
 	&__item
@@ -1910,9 +1889,7 @@
 		width: 200px
 		padding: 25px 0
 		border-top: 1px solid #989896
-		font-size: 16px
-		color: #ff1769
-		+unit
+		font-size: 0
 		i
 			display: inline-block
 			vertical-align: middle
@@ -1921,6 +1898,10 @@
 		span
 			display: inline-block
 			vertical-align: middle
+			width: 140px
+			font-size: 16px
+			color: #ff1769
+			+unit
 .sensors
 	&__text
 		display: inline-block
@@ -1968,40 +1949,47 @@
 	&__item
 		position: absolute
 		display: block
-		cursor: pointer
-		+s(parts-plus)
 		margin-left: -30px
 		margin-top: -61px
-		z-index: 5
-		&.is-active
-			+s(parts-close)
 		&.parts1
-			top: 325px
-			left: 75px
+			top: 355px
+			left: 95px
 		&.parts2
-			top: 80px
-			left: 105px
+			top: 130px
+			left: 120px
 		&.parts3
-			top: 490px
+			top: 530px
 			left: 290px
 		&.parts4
-			top: 660px
+			top: 665px
 			left: 345px
 		&.parts5
-			top: 0px
+			top: 50px
 			left: 525px
 		&.parts6
-			top: 520px
-			left: 645px
+			top: 540px
+			left: 620px
 		&.parts7
-			top: 490px
-			left: 775px
+			top: 505px
+			left: 740px
 		&.parts8
-			top: 525px
-			left: 900px
+			top: 535px
+			left: 855px
 		&.parts9
-			top: 110px
-			left: 1020px
+			top: 160px
+			left: 960px
+		&.is-active
+			.parts__plus
+				z-index: 100
+				+s(parts-close)
+			.parts__info
+				display: block
+				z-index: 99
+	&__plus
+		position: relative
+		cursor: pointer
+		+s(parts-plus)
+		z-index: 98
 	&__info
 		display: none
 		position: absolute
@@ -2010,11 +1998,8 @@
 		background: #FFF
 		width: 310px
 		padding: 30px
-		z-index: 2
 		+box
 		+unit
-		&.is-active
-			display: block
 		span
 			font-size: 21px
 		p
@@ -2032,3 +2017,153 @@
 			p
 				font-size: 21px
 				+unit
+
+.o-top
+	height: 1025px
+	background: url(../img/operation-bg.jpg) no-repeat
+	+cover
+	&__title
+		position: absolute
+		top: 10%
+		left: 0
+		right: 0
+		font-size: 106px
+		line-height: 110px
+		+bold
+.operation
+	&__wrap	
+		padding: 50px 0
+		text-align: center
+		&.order
+			.op-icon
+				+s(order)
+		&.pos
+			.op-icon
+				+s(pos)
+		&.staff
+			.op-icon
+				+s(staff)
+			.operation__inn
+				padding-bottom: 100px
+		&.manage
+			.op-icon
+				+s(manage)
+		&.analytics
+			.op-icon
+				+s(analytics)
+		&.crm
+			.op-icon
+				+s(crm)
+		&.s-marketing
+			.op-icon
+				+s(s-marketing)
+		& .cms
+			.op-icon
+				+s(cms)
+			&__img
+				width: 896px
+				height: 565px
+				background: url("../img/cms-bg.png") no-repeat
+		p
+			max-width: 760px
+			margin: 0 auto
+			font-size: 24px
+			+unit
+			&.order__top
+				margin: 20px auto 100px
+	&__title
+		span
+			display: inline-block
+			vertical-align: top
+		h3
+			padding: 30px 0
+			font-size: 54px
+			+bold
+			&:before, &:after
+				content: ""
+				display: inline-block
+				vertical-align: middle
+				margin: 0 15px
+				width: 70px
+				height: 1px
+				background: rgba(41, 41, 41, 0.32) 
+		p
+			padding-bottom: 50px
+	&__inn
+		padding-top: 100px
+		font-size: 0
+		text-align: left
+	&__text
+		display: inline-block
+		vertical-align: top
+		width: 200px
+		padding-top: 50px
+		span
+			display: inline-block
+			vertical-align: top
+			&.baloon
+				+s(baloon)
+			&.w-control
+				+s(w-control)
+		h5
+			margin: 35px 0
+			font-size: 30px
+			+unit
+		p
+			font-size: 17px
+		&.order__preview
+			margin-left: 75px
+		&.watch-control
+			width: 360px
+			margin: 100px 160px 0 0
+			h5
+				font-size: 54px
+			p
+				font-size: 24px
+	&__img
+		display: inline-block
+		vertical-align: top
+.manage
+	height: 1080px
+	background: url("../img/manage-bg.png") center bottom no-repeat
+	&__img
+		img
+			width: 100%
+			height: auto
+	&__wrapper
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+.analytics
+	&__wrap
+		position: relative
+		width: 896px
+		height: 565px
+		padding: 49px 60px 80px
+		overflow: hidden
+		background: url("../img/analytics-bg.png") no-repeat
+		+box
+	&__inner
+		position: relative
+		width: 100%
+		height: 100%
+		overflow: hidden
+		img
+			height: 435px
+			position: absolute
+			top: 0
+			left: 0
+	&__range
+		width: 620px
+		margin: 70px auto 230px 
+		&.ui-slider:before
+			left: -36px
+			right: -36px
+			background-image: linear-gradient(left, rgba(0,209,254,.99) 0%, rgba(218,0,164,.99) 66.06%, rgba(251,35,48,.99) 100%)
+		.ui-slider-handle:before
+			margin: -36px 0 0 -41px
+			background: none
+			border: none 
+			box-shadow: none  
+			+s(analytics-range)
