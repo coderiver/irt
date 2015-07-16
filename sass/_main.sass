@@ -2021,6 +2021,7 @@
 .o-top
 	height: 1025px
 	background: url(../img/operation-bg.jpg) no-repeat
+	z-index: 5
 	+cover
 	&__title
 		position: absolute
@@ -2030,6 +2031,15 @@
 		font-size: 106px
 		line-height: 110px
 		+bold
+	img.os-main
+		position: absolute
+		bottom: 118px
+		left: 510px
+		z-index: 7
+		width: 910px
+		&.is-hidden
+			opacity: 0
+			visibility: hidden
 .operation
 	&__wrap	
 		padding: 50px 0
@@ -2099,10 +2109,20 @@
 		padding-top: 100px
 		font-size: 0
 		text-align: left
+		&.watch-control
+			.operation__text
+				width: 360px
+				margin: 100px 160px 0 0
+				h5
+					font-size: 54px
+				p
+					font-size: 24px
+			.operation__img
+				width: 500px
 	&__text
 		display: inline-block
 		vertical-align: top
-		width: 200px
+		width: 260px
 		padding-top: 50px
 		span
 			display: inline-block
@@ -2113,6 +2133,10 @@
 				+s(w-control)
 			&.soc-marketing
 				+s(s-marketing)
+			&.live-preview
+				+s(live-preview)
+			&.cms-lang	
+				+s(cms-lang)
 		h5
 			margin: 35px 0
 			font-size: 30px
@@ -2121,19 +2145,14 @@
 			font-size: 17px
 		&.order__preview
 			margin-left: 75px
-		&.watch-control
-			width: 360px
-			margin: 100px 160px 0 0
-			h5
-				font-size: 54px
-			p
-				font-size: 24px
 	&__img
 		display: inline-block
 		vertical-align: top
+		width: 780px
 .manage
-	height: 1080px
-	background: url("../img/manage-bg.png") center bottom no-repeat
+	height: 1140px
+	background: url("../img/manage-bg.png")
+	+cover
 	&__img
 		img
 			width: 100%
@@ -2143,12 +2162,14 @@
 		top: 0
 		left: 0
 		right: 0
+		bottom: 0
 .analytics
 	&__wrap
 		position: relative
 		width: 896px
 		height: 565px
 		padding: 49px 60px 80px
+		margin: 0 auto
 		overflow: hidden
 		background: url("../img/analytics-bg.png") no-repeat
 		+box
@@ -2176,6 +2197,40 @@
 			box-shadow: none  
 			+s(analytics-range)
 .cms
+	&__inn
+		width: 900px
+		margin: 0 auto
+	&__nav
+		margin: 30px 0
+		font-size: 0
+		text-align: center
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 15px
+			position: relative
+			&:before
+				position: absolute
+				left: 0
+				top: 50%
+				margin: -2px 0 0 -2px
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background: #D8D7D7 
+				content: "" 
+			&:first-child
+				&:before
+					display: none
+			a
+				display: inline-block
+				+unit
+				color: #25aff5
+				font-size: 18px
+				line-height: 1
+				+transition(color 0.3s)
+				&:hover, &.is-active
+					color: #292929
 	&__wrap
 		width: 896px
 		height: 565px
@@ -2183,8 +2238,26 @@
 		background: url("../img/cms-bg.png") no-repeat
 	&__img
 		width: 776px
-		height: 435px
+		height: 436px
 	&__slider
 		height: 100%
 		.slick-list
 			height: 100%
+		.slick-prev
+			left: -115px
+		.slick-next
+			right: -115px
+	&__preview
+		.operation__img
+			margin-right: 75px
+	&__lang
+		.operation__img
+			margin-left: 85px
+.zoomContainer
+	z-index: 5
+	.zoomLens
+		width: 342px
+		height: 342px
+		border-radius: 50%
+		border: none !important
+		box-shadow: 0 12px 28px 1px rgba(0,0,0,.44)
