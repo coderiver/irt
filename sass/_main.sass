@@ -1,6 +1,7 @@
-*::-moz-selection,
+*::-moz-selection
+	background-color: #ff0061
 *::selection 
-	background-color: red
+	background-color: #ff0061
 
 .out
 	min-width: 1200px
@@ -104,12 +105,12 @@
 	float: left
 	div
 		padding: 14px
-		margin-left: -16px
+		margin-left: -12px
 		border-radius: 50%
 		background: #fff
 		display: inline-block
 		vertical-align: middle
-		margin-right: 16px
+		margin-right: 20px
 		img
 			width: 40px
 			height: 40px
@@ -219,13 +220,16 @@
 			width: 100%
 		span
 			+unit
-			font-size: 21px
+			font-size: 18px
 			line-height: 25px
 			color: #07090D
 			display: block
 			+transition(color 0.3s)
 			width: 99%
 			margin-bottom: 18px
+			&.item__title
+				font-size: 24px
+				+bold
 	&__img
 		position: relative
 		margin-bottom: 10px
@@ -507,6 +511,9 @@
 	text-align: center
 	height: 61px
 	&__inner
+		position: relative
+		top: -61px
+		z-index: -1
 		border-bottom: 1px solid #d9d9d9
 		background: rgba(255, 255, 255, 0.97) 
 		min-width: 1200px  
@@ -1461,6 +1468,7 @@
 		width: 440px 
 		float: left
 	&__heading
+		margin-bottom: 64px
 		font-size: 66px
 		text-shadow: 1.5px 2.6px 136px rgba(0, 0, 0, 0.22)
 		+bold
@@ -1650,29 +1658,47 @@
 .eco
 	&__title
 		h1
-			padding: 20px 0
+			padding: 44px 0 13px
 			color: #171717
 			font-size: 72px
 			+bold
 		p
 			font-size: 56px
+			line-height: 1.2
 			+reg
 	&__img
-		padding: 50px
+		height: 760px
+		margin: 50px 0 160px
+		position: relative
+		background: url("../img/ecosystem-bg.png") center center no-repeat
+	&__pic
+		position: absolute
+		&.pic1
+			top: 4px
+			left: 18px 
+		&.pic2
+			top: 43px
+			right: 58px
+		&.pic3
+			bottom: -134px
+			left: 183px
 	&__wrap
 		margin-left: -20px
-		padding-bottom: 200px
+		padding-bottom: 240px
 	&__item
 		display: inline-block
 		vertical-align: top
-		width: 360px
-		margin-left: 20px
+		width: 310px
+		margin: 0 50px 0 20px
 		span
+			display: block
+			width: 360px
 			font-size: 46px
 			+bold
 		p
 			padding-top: 20px
 			font-size: 21px
+			line-height: 1.5
 			+unit
 
 .sdk, .watch
@@ -1739,24 +1765,43 @@
 .media
 	margin-bottom: 150px
 	&__title
-		margin-top: 50px
-		font-size: 60px
+		margin-top: 57px
+		font-size: 30px
 		+bold
 	&__item
 		span
 			display: block
-			margin: 45px 0
+			margin: 10px 0 30px
 			font-size: 56px
 			+reg
 	&__wrap
-		margin: 0 0 80px -20px
-		img, figure
+		margin: 0 0 110px -20px
+		a, figure
 			display: inline-block
 			vertical-align: top
 			margin: 0 0 20px 20px
+		a
+			position: relative
+			height: 260px
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				content: "" 
+			&:hover
+				&:before
+					background: rgba(0, 0, 0, 0.2)
 		figure
 			a
-				cursor: pointer 
+				margin: 0
+			a.media__figcaption
+				display: block
+				height: auto
+				&:hover
+					&:before
+						background: none
 			img
 				display: block
 				margin: 0
@@ -1829,8 +1874,9 @@
 	background: url(../img/hardware-bg.jpg) no-repeat
 	+cover
 	&__title
+		max-width: 660px
 		position: absolute
-		top: 60%
+		top: 61.8%
 		left: 0
 		right: 0
 		font-size: 110px
@@ -1838,50 +1884,64 @@
 		+bold
 .hardware
 	&__topper
-		padding: 100px 0
+		padding: 90px 0 110px
+		&.question
+			padding: 130px 0
+			.mark
+				padding-top: 20px
 		.mark
 			display: inline-block
 			vertical-align: top
 			width: 270px
+			padding: 10px 10px 0 0
 			text-align: center
 		.post
 			display: inline-block
 			vertical-align: top
-			width: 830px
+			width: 750px
+			h3
+				width: 700px
+				font-size: 58px
 			span
 				font-size: 58px
 				+bold
 			p
-				padding-top: 40px
+				padding-top: 26px
 				font-size: 28px
+				line-height: 1.5
 				+unit
 				i
 					color: #fb0159
 				em
 					color: #39b8e8
 	&__wrapper
-		padding: 100px 0
+		padding: 100px 0 70px
 		background: #f6f6ee
 	&__title
 		text-align: center
 		h5
 			margin: 50px 0 100px
 .tech
+	font-size: 0
 	margin: 90px 0 0 -20px
 	&__item
 		display: inline-block
 		vertical-align: top
-		width: 265px
-		margin-left: 20px
+		width: 247px
+		margin: 0 15px 0 20px
 		h5
 			display: block
-			margin: 30px 0
+			margin: 10px 0 25px
 			font-size: 30px
+			line-height: 1.2
 			+bold
 		p
-			padding-bottom: 35px
+			padding-bottom: 30px
 			font-size: 14px
+			line-height: 1.75
 			+unit
+		&:nth-child(2)
+			width: 250px
 	&__img
 		position: relative
 		height: 410px
@@ -2027,6 +2087,7 @@
 	background: url(../img/operation-bg.jpg) no-repeat
 	z-index: 5
 	+cover
+	background-position: left bottom 
 	&__title
 		position: absolute
 		top: 10%
@@ -2037,16 +2098,17 @@
 		+bold
 	img.os-main
 		position: absolute
-		bottom: 118px
-		left: 510px
+		bottom: 116px
+		left: 23.5%
 		z-index: 7
-		width: 910px
-		&.is-hidden
-			opacity: 0
-			visibility: hidden
+		width: 1013px
+		-webkit-transform-origin: 0px 0px 0px
+		transform-origin: 0px 0px 0px
+		-webkit-transform: matrix3d(0.9465, 0.0000, 0, -0.0000001, -0.045, 0.85, 0, -0.00009, 0, 0, 1, 0, 54, 56, 0, 1)
+		transform: matrix3d(0.9465, 0.0000, 0, -0.0000001, -0.045, 0.85, 0, -0.00009, 0, 0, 1, 0, 54, 56, 0, 1)
 .operation
 	&__wrap	
-		padding: 50px 0
+		padding: 60px 0 50px
 		text-align: center
 		&.order
 			.op-icon
@@ -2057,8 +2119,6 @@
 		&.staff
 			.op-icon
 				+s(staff)
-			.operation__inn
-				padding-bottom: 100px
 		&.manage
 			.op-icon
 				+s(manage)
@@ -2073,31 +2133,47 @@
 			background: url("../img/s-marketing-bg.jpg") no-repeat
 			+cover
 			.operation__text
-				margin: 220px 0 0 860px 
+				max-width: 205px
+				margin: 286px 0 0 867px 
 				color: #FFF
-		& .cms
+				+reg
+				h5
+					font-size: 41px
+					line-height: 1.2
+					margin: 28px 0
+				p
+					font-size: 17px
+					line-height: 1.55
+		&.cms
 			.op-icon
 				+s(cms)
 		&.add-app
+			margin-bottom: 30px
 			.op-icon
 				+s(add-app)
 		&.constructor
+			padding-bottom: 90px
 			.op-icon
 				+s(constructor)
 		p
-			max-width: 760px
+			max-width: 630px
 			margin: 0 auto
-			font-size: 24px
+			font-size: 20px
+			line-height: 1.6
 			+unit
 			&.order__top
-				margin: 20px auto 100px
+				max-width: 760px
+				font-size: 25px
+				line-height: 1.5
+				margin: 0 auto 96px
 	&__title
 		span
 			display: inline-block
 			vertical-align: top
 		h3
-			padding: 30px 0
+			padding: 25px 0 20px
 			font-size: 54px
+			line-height: 1.2
 			+bold
 			&:before, &:after
 				content: ""
@@ -2108,21 +2184,26 @@
 				height: 1px
 				background: rgba(41, 41, 41, 0.32) 
 		p
-			padding-bottom: 50px
+			padding-bottom: 33px
 	&__inn
-		padding-top: 100px
+		padding-top: 65px
 		font-size: 0
 		text-align: left
+		&.order-map
+			padding-top: 110px
 		&.watch-control
+			padding: 145px 0 100px
 			.operation__text
 				width: 360px
-				margin: 100px 160px 0 0
+				margin: 55px 140px 0 105px
 				h5
+					margin: 35px 0 30px
 					font-size: 54px
+					+bold
 				p
 					font-size: 24px
 			.operation__img
-				width: 500px
+				width: 450px
 	&__text
 		display: inline-block
 		vertical-align: top
@@ -2144,17 +2225,43 @@
 		h5
 			margin: 35px 0
 			font-size: 30px
+			line-height: 1.2
 			+unit
 		p
 			font-size: 17px
-		&.order__preview
-			margin-left: 75px
+			line-height: 1.6
 	&__img
 		display: inline-block
 		vertical-align: top
 		width: 780px
+.order
+	.operation__title
+		h3
+			padding: 21px 0 16px
+	&-map
+		.operation__text
+			width: 190px
+			margin-right: 56px
+			padding: 57px 0 0 11px
+	&-preview
+		.operation__text
+			width: 200px 
+			margin-left: 85px
+			padding-top: 30px
+			h5
+				width: 140px
+				margin: 35px 0 31px
+.pos
+	padding: 70px 0 40px
+	.operation__title
+		h3
+			padding: 24px 0 35px
+.staff
+	.operation__title
+		h3
+			padding: 17px 0 30px 
 .manage
-	height: 1140px
+	height: 980px
 	background: url("../img/manage-bg.png")
 	+cover
 	&__img
@@ -2167,6 +2274,21 @@
 		left: 0
 		right: 0
 		bottom: 0
+	.operation__title
+		margin-top: -90px
+		h3
+			padding: 30px 0 23px
+@keyframes range
+	0%
+		top: 0
+	25%
+		top: -5px 
+	50%
+		top: 0
+	75%
+		top: 5px
+	100%
+		top: 0
 .analytics
 	&__wrap
 		position: relative
@@ -2194,18 +2316,29 @@
 			left: -36px
 			right: -36px
 			background-image: linear-gradient(left, rgba(0,209,254,.99) 0%, rgba(218,0,164,.99) 66.06%, rgba(251,35,48,.99) 100%)
-		.ui-slider-handle:before
-			margin: -36px 0 0 -41px
-			background: none
-			border: none 
-			box-shadow: none  
-			+s(analytics-range)
+		.ui-slider-handle
+			&:before
+				margin: -36px 0 0 -41px
+				background: none
+				border: none 
+				box-shadow: none  
+				+s(analytics-range)
+				animation: range 0.8s infinite linear
+			&.ui-state-active
+				&:before
+					animation: none
+			
 .cms
+	padding-top: 70px
+	.operation__title
+		margin-bottom: -20px
+		h3
+			padding: 30px 0 40px
 	&__inn
 		width: 900px
 		margin: 0 auto
 	&__nav
-		margin: 30px 0
+		margin: 12px 0 14px
 		font-size: 0
 		text-align: center
 		li
@@ -2248,15 +2381,31 @@
 		.slick-list
 			height: 100%
 		.slick-prev
-			left: -115px
+			left: -150px
 		.slick-next
-			right: -115px
+			right: -150px
 	&__preview
+		.operation__inn
+			padding-top: 0
 		.operation__img
-			margin-right: 75px
+			margin-right: 85px
+		.cms__nav
+			margin: 0
+		.operation__text
+			width: 250px
+			padding-top: 55px
+			h5
+				margin: 14px 0 22px
 	&__lang
+		margin-bottom: 15px
+		.operation__inn
+			padding-top: 134px
+		.operation__text
+			padding: 44px 0 0 11px
+			h5
+				margin: 18px 0 24px
 		.operation__img
-			margin-left: 85px
+			margin: -80px 0 0 85px
 .zoomContainer
 	z-index: 5
 	.zoomLens

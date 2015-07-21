@@ -288,14 +288,4 @@ head.ready(function() {
 		new Slideshow( document.getElementById( 'slideshow-2' ) );
 	})();
 
-	$(".cms__zoom").elevateZoom({ 
-		zoomType: "lens", 
-		lensShape: "round", 
-		lensSize: 200 
-	});
-
-	setTimeout(function(){
-		$('.os-main').addClass('is-hidden');
-	}, 3900);
-
 });
