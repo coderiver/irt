@@ -283,6 +283,8 @@
 			+transition(color 0.3s)
 			&:hover
 				color: #ff0061
+	&.hw
+		padding-bottom: 0
 				
 .map
 	position: relative
@@ -794,10 +796,13 @@
 	&__bg
 		background: url(../img/more-img1-bg.jpg) repeat-x bottom center
 	&__img
-		background: url(../img/more-img1.png) no-repeat bottom left
-		height: 1008px  
+		width: 56%
+		height: 1008px 
+		margin-bottom: -1008px 
+		background: url(../img/more-img1.png) no-repeat right bottom
 	&__item
 		max-width: 1120px
+		height: 1008px
 		margin: 0 auto
 		+clr
 	&__col
@@ -1284,13 +1289,17 @@
 .b-service
 	background: url(../img/b-service-bg.jpg) repeat-x center bottom
 	&__img
-		background: url(../img/b-service.png) no-repeat left bottom
+		width: 58%
 		height: 940px
+		margin-bottom: -940px
+		background: url(../img/b-service.png) no-repeat right bottom
 	&__item		
 		max-width: 1120px
+		height: 940px
 		margin: 0 auto 
+		padding: 80px 0
+		+box  
 		+clr
-		padding: 80px 0  
 	&__col
 		float: right
 		width: 360px
@@ -1354,23 +1363,33 @@
 		height: 907px
 		position: relative
 		&.is-active
+			> img
+				right: 0
 			.c-money__img
-				&.is-one
-					right: 0
-				&.is-two
-					right: 0
-	&__img
-		width: 100%
-		height: 907px
-		background-repeat: no-repeat
-		+cover
+				right: 0
+	&__inner
 		position: absolute
 		top: 0
-		+transition(right 1s ease)
-		&.is-one
-			left: 0
-		&.is-two
-			right: 100%
+		left: 0
+		width: 100%
+		height: 907px
+		+cover	
+	&__wrap
+		position: absolute
+		top: 0
+		left: 0
+		width: 100% 
+		height: 907px
+		overflow: hidden
+		animation: move 5s alternate infinite linear
+	&__wrapper
+		position: absolute
+		top: 0
+		left: 0 
+		width: 100vw
+		min-width: 1200px 
+		height: 907px
+		+cover	
 	&__text
 		width: 740px
 		margin: 0 auto
@@ -1379,6 +1398,11 @@
 			text-align: center
 		hr
 			margin: 0 auto 38px 
+@keyframes move
+	0%
+		width: 0
+	100%
+		width: 100%
 
 .c-more
 	width: 1140px
@@ -1710,18 +1734,24 @@
 	span
 		display: block
 	&__title
-		padding-top: 200px
+		padding-top: 175px
 		font-size: 100px
-		line-height: 92px
+		line-height: 0.98
 		+bold
 	&__text
+		margin-top: 5px
 		font-size: 33px
 		+unit
 .sdk
-	background: url("../img/sdk.png") no-repeat
+	background: url("../img/sdk.png") right top no-repeat
 .watch
 	background: url("../img/watch.png") no-repeat
 	+cover
+	&__title
+		font-size: 114px
+		line-height: 1
+	&__text
+		margin-top: 20px
 
 .surface
 	position: relative
@@ -1732,10 +1762,12 @@
 	+cover
 	&__text
 		position: absolute
-		top: 35%
+		top: 37%
 		left: 0
 		right: 0
 		span
+			display: block
+			margin-bottom: 30px
 			font-size: 124px
 			line-height: 118px
 			+bold
@@ -1814,8 +1846,7 @@
 
 .c-top
 	height: 1140px
-	background: url(../img/cloud-bg.jpg) no-repeat
-	+cover
+	background: #F1F1F3 url(../img/cloud-bg.jpg) center center no-repeat
 	&__title
 		position: absolute
 		top: 40%
@@ -1889,6 +1920,12 @@
 			padding: 130px 0
 			.mark
 				padding-top: 20px
+			.post 
+				h3
+					font-size: 58px
+				p
+					margin-top: 7px
+					line-height: 1.5
 		.mark
 			display: inline-block
 			vertical-align: top
@@ -1900,15 +1937,18 @@
 			vertical-align: top
 			width: 750px
 			h3
+				padding-top: 5px
 				width: 700px
-				font-size: 58px
+				font-size: 59px
+				line-height: 1.1
 			span
 				font-size: 58px
 				+bold
 			p
+				margin-top: 20px
 				padding-top: 26px
 				font-size: 28px
-				line-height: 1.5
+				line-height: 1.45
 				+unit
 				i
 					color: #fb0159
@@ -1973,11 +2013,13 @@
 		width: 270px
 		+unit
 		h5
+			margin-top: 48px
 			font-size: 36px
-			padding-bottom: 30px
+			line-height: 1.2
 		p
-			font-size: 21px
-			padding-bottom: 70px
+			margin: 20px 0 65px
+			font-size: 22px
+			line-height: 1.45			
 	&__img
 		display: inline-block
 		vertical-align: top
@@ -2003,6 +2045,7 @@
 	&:last-child
 		margin-bottom: -100px
 .parts-wrap
+	padding: 60px 0 200px
 	background: #f5f5f5
 .parts
 	position: relative
@@ -2068,29 +2111,40 @@
 			font-size: 21px
 		p
 			font-size: 15px
+	h5
+		margin: 40px 150px 120px 
 
 .hw-inside
-	margin-bottom: -92px
+	margin: 88px 0 -92px
 	> .hardware__topper
 		padding-bottom: 0
 		> .inside__item
+			position: relative
 			margin: 0 auto
+			padding-bottom: 450px
+			.inside__item-col
+				margin-left: 85px
 			img
-				position: relative
+				position: absolute
+				top: -100px
+				right: -90px
 				z-index: -1
+			h5
+				margin-bottom: 48px
+			h3
+				margin-bottom: 75px
 			p
 				font-size: 21px
+				line-height: 1.5
 				+unit
 
 .o-top
 	height: 1025px
-	background: url(../img/operation-bg.jpg) no-repeat
+	background: url(../img/operation-bg.jpg) center bottom repeat-x
 	z-index: 5
-	+cover
-	background-position: left bottom 
 	&__title
 		position: absolute
-		top: 10%
+		top: 15%
 		left: 0
 		right: 0
 		font-size: 106px
@@ -2098,14 +2152,16 @@
 		+bold
 	img.os-main
 		position: absolute
-		bottom: 116px
-		left: 23.5%
+		bottom: 117px
+		left: 0
+		right: 0
 		z-index: 7
 		width: 1013px
+		margin: 0 auto
 		-webkit-transform-origin: 0px 0px 0px
 		transform-origin: 0px 0px 0px
-		-webkit-transform: matrix3d(0.9465, 0.0000, 0, -0.0000001, -0.045, 0.85, 0, -0.00009, 0, 0, 1, 0, 54, 56, 0, 1)
-		transform: matrix3d(0.9465, 0.0000, 0, -0.0000001, -0.045, 0.85, 0, -0.00009, 0, 0, 1, 0, 54, 56, 0, 1)
+		-webkit-transform: matrix3d(0.79, 0, 0, 0.0, -0.045, 0.7, 0, -0.00009, 0, 0, 1, 0, 109, 160, 0, 1)
+		transform: matrix3d(0.79, 0, 0, 0.0, -0.045, 0.7, 0, -0.00009, 0, 0, 1, 0, 109, 160, 0, 1)
 .operation
 	&__wrap	
 		padding: 60px 0 50px
@@ -2261,19 +2317,49 @@
 		h3
 			padding: 17px 0 30px 
 .manage
+	margin: 100px auto 40px
+	width: 100%
+	position: relative
 	height: 980px
-	background: url("../img/manage-bg.png")
-	+cover
-	&__img
-		img
-			width: 100%
-			height: auto
+	background: url("../img/manage-bg.png") center bottom repeat-x
 	&__wrapper
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		-webkit-transform-origin: 0 0
+		transform-origin: 0 0
+	&__wrap
 		position: absolute
 		top: 0
 		left: 0
 		right: 0
 		bottom: 0
+	&__screen
+		position: absolute
+		top: 300px
+		left: 0
+		right: 0
+		z-index: 100
+		background: #333
+		outline: 1px solid transparent
+		-webkit-transform-origin: 0px 0px 0px
+		transform-origin: 0px 0px 0px
+		width: 957px
+		height: 540px
+		margin: 0 auto
+		-webkit-transform: matrix3d(0.571, 0.018, 0, -0.00015, -0.2, 0.711, 0, -0.00004, 0, 0, 1, 0, 207, 113, 0, 1)
+		transform: matrix3d(0.571, 0.018, 0, -0.00015, -0.2, 0.711, 0, -0.00004, 0, 0, 1, 0, 207, 113, 0, 1)
+		ul.slick-dots
+			padding-top: 100px
+			li
+				button
+					background: #7C7C7C
+					opacity: 1
+				&.slick-active
+					button
+						opacity: 1
+						background: #FFF 
 	.operation__title
 		margin-top: -90px
 		h3
