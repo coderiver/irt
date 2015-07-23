@@ -732,7 +732,7 @@ a:hover { color: #ff0061; }
 .hardware__topper .post span { font-size: 58px; font-family: "UnitSlabOffcPro-Bold", Arial, sans-serif; }
 .hardware__topper .post p { margin-top: 20px; padding-top: 26px; font-size: 28px; line-height: 1.45; font-family: "Unit-Regular", Arial, sans-serif; }
 .hardware__topper .post p i { color: #fb0159; }
-.hardware__topper .post p em { color: #39b8e8; }
+.hardware__topper .post p em { font-style: normal; color: #39b8e8; }
 .hardware__wrapper { padding: 100px 0 70px; background: #f6f6ee; }
 .hardware__title { text-align: center; }
 .hardware__title h5 { margin: 50px 0 100px; }
@@ -748,10 +748,24 @@ a:hover { color: #ff0061; }
 .tech__note i { display: inline-block; vertical-align: middle; margin-right: 10px; background: url('../img/icons-s49dd1ca0fb.png') 0 -1789px no-repeat; width: 50px; height: 50px; }
 .tech__note span { display: inline-block; vertical-align: middle; width: 140px; font-size: 16px; color: #ff1769; font-family: "Unit-Regular", Arial, sans-serif; }
 
-.sensors__text { display: inline-block; vertical-align: top; width: 270px; font-family: "Unit-Regular", Arial, sans-serif; }
-.sensors__text h5 { margin-top: 48px; font-size: 36px; line-height: 1.2; }
-.sensors__text p { margin: 20px 0 65px; font-size: 22px; line-height: 1.45; }
-.sensors__img { display: inline-block; vertical-align: top; margin-left: 85px; }
+.sensors__inner { display: inline-block; vertical-align: top; width: 270px; margin-right: 110px; font-family: "Unit-Regular", Arial, sans-serif; }
+.sensors__item h5 { padding-top: 48px; font-size: 36px; line-height: 1.2; }
+.sensors__item p { padding: 20px 0 65px; font-size: 22px; line-height: 1.45; }
+.sensors__wrapper { display: inline-block; vertical-align: top; }
+.sensors__img { position: relative; width: 750px; height: 1180px; }
+.sensors__table { position: absolute; left: 50%; bottom: 0; margin-left: -525px; opacity: 0.5; z-index: 1; }
+.sensors__table span { position: absolute; left: 150px; cursor: default; text-transform: uppercase; font-size: 11px; color: #292929; font-family: "Unit-Regular", Arial, sans-serif; }
+.sensors__table.table2 { z-index: 2; }
+.sensors__table.table2 span { top: 580px; }
+.sensors__table.table3 { z-index: 3; }
+.sensors__table.table3 span { top: 490px; }
+.sensors__table.table4 { z-index: 4; }
+.sensors__table.table4 span { top: 345px; }
+.sensors__table.table5 { z-index: 5; }
+.sensors__table.table5 span { top: 240px; }
+.sensors__table.table6 { z-index: 6; }
+.sensors__table.table6 span { top: 140px; }
+.sensors__table.is-active { opacity: 1; }
 
 .recognition { margin: 0 -60px; }
 .recognition__text { display: inline-block; vertical-align: top; width: 455px; margin: 90px 60px 0; }

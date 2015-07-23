@@ -5,5 +5,5 @@ head.load("js/lib/jquery.js",
 					"js/lib/mockup-main.js",
 					"js/lib/jquery.form-validator.min.js",
 					"js/lib/jquery-ui.min.js",
-					"js/lib/jquery.elevatezoom.min.js",
+					"js/lib/ScrollMagic.min.js",
 					"js/common.js");

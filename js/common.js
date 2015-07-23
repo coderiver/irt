@@ -296,8 +296,70 @@ head.ready(function() {
 		return false;
 	});
 
-	// (function() {
-	// 	new Slideshow( document.getElementById( 'slideshow-2' ) );
-	// })();
+	$(function(){ // document ready
+	   if (!!$('.js-sticky').length) { // make sure ".js-sticky" element exists
+	      var el = $('.js-sticky');
+	      var stickyTop = $('.js-sticky').offset().top; // returns number
+	      var footerTop = $('.js-sticky-end').offset().top; // returns number
+	      var stickyHeight = $('.js-sticky').height();
+	      var limit = footerTop - stickyHeight - 100;
+	      $(window).scroll(function(){ // scroll event
+	          var windowTop = $(window).scrollTop(); // returns number
+	            
+	          if (stickyTop-100 < windowTop){
+	             el.css({ position: 'fixed', top: 0 });
+	             el.addClass('is-active');
+	          }
+	          else {
+	             el.css('position','static');
+	             el.removeClass('is-active');
+	          }
+	            
+	          if (limit < windowTop) {
+	          var diff = limit - windowTop;
+	          el.css({top: diff});
+	          }     
+	        });
+	   }
+	});
+
+
+	var sceneSensor = new ScrollMagic.Scene({triggerElement: ".js-sensor", offset: 50, duration: 1180})
+
+	function scrollSensor() {
+		var caption = $('.js-sensor-caption');
+		var textBlock = $('.js-textblock');
+		var activeClass = 'is-active';
+
+		var scrollController = new ScrollMagic.Controller({container: 'body'});
+
+		textBlock.each(function(index, el) {
+			new ScrollMagic.Scene({
+				triggerElement: el,
+				duration: $(el).outerHeight()
+				// triggerHook: 'onEnter' // 'onLeave' , 'onCenter'
+			})
+			.on('start', function(e) {
+				if (e.scrollDirection == 'FORWARD') {
+					$(caption[index]).addClass(activeClass);
+				}
+				if (e.scrollDirection == 'REVERSE') {
+					$(caption[index]).removeClass(activeClass);
+				}
+			})
+			.on('end', function(e) {
+				if (e.scrollDirection == 'FORWARD') {
+					$(caption[index]).removeClass(activeClass);
+				}
+				if (e.scrollDirection == 'REVERSE') {
+					$(caption[index]).addClass(activeClass);
+				}
+			})
+			.addTo(scrollController);
+		});
+	}
+
+	scrollSensor();
+
 
 });
