@@ -106,6 +106,9 @@ a:hover { color: #ff0061; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
+.ff .btn-blue { padding: 27px 20px 32px; }
+.ff .btn-grey { padding: 27px 20px 32px; }
+
 .btn-blue { display: inline-block; vertical-align: top; font-size: 21px; color: #FFF; font-family: "Unit-Regular", Arial, sans-serif; background: #08BCF8; position: relative; line-height: 1; width: 327px; padding: 29px 20px 30px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-transition: background 0.3s; -o-transition: background 0.3s; -webkit-transition: background 0.3s; transition: background 0.3s; }
 .btn-blue:hover { background: #047196; }
 .btn-blue:active { top: 1px; }
