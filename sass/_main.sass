@@ -1,7 +1,9 @@
 *::-moz-selection
 	background-color: #ff0061
+	color: #FFF
 *::selection 
 	background-color: #ff0061
+	color: #FFF
 
 .out
 	min-width: 1200px
@@ -146,7 +148,7 @@
 					right: 0
 					+transition(opacity 0.3s, visibility 0.3s, transform 0.3s)
 					content: "" 
-					margin: -3px 0 0 
+					margin: -2px 0 0 
 					+will
 				&:before
 					+arr(10, 7, #fff, b)
@@ -1363,10 +1365,8 @@
 		height: 907px
 		position: relative
 		&.is-active
-			> img
-				right: 0
-			.c-money__img
-				right: 0
+			> .c-money__wrap
+				width: 100%
 	&__inner
 		position: absolute
 		top: 0
@@ -1378,10 +1378,10 @@
 		position: absolute
 		top: 0
 		left: 0
-		width: 100% 
+		width: 0 
 		height: 907px
 		overflow: hidden
-		animation: move 5s alternate infinite linear
+		+transition(width 3s ease-out)
 	&__wrapper
 		position: absolute
 		top: 0
@@ -1398,11 +1398,6 @@
 			text-align: center
 		hr
 			margin: 0 auto 38px 
-@keyframes move
-	0%
-		width: 0
-	100%
-		width: 100%
 
 .c-more
 	width: 1140px
@@ -1744,6 +1739,8 @@
 		+unit
 .sdk
 	background: url("../img/sdk.png") right top no-repeat
+	&__title
+		letter-spacing: 1.3px 
 .watch
 	background: url("../img/watch.png") no-repeat
 	+cover
@@ -1788,6 +1785,9 @@
 			font-size: 72px
 			color: #000
 			+bold
+	&__slider
+		.slick-prev, .slick-next
+			top: 43%
 	&__text
 		margin: 0 120px
 		padding-bottom: 90px
@@ -1847,6 +1847,7 @@
 .c-top
 	height: 1140px
 	background: #F1F1F3 url(../img/cloud-bg.jpg) center center no-repeat
+	+cover
 	&__title
 		position: absolute
 		top: 40%
@@ -2013,8 +2014,12 @@
 		vertical-align: top
 		width: 270px
 		margin-right: 110px
+		padding-bottom: 500px
 		+unit
 	&__item
+		opacity: 0.4
+		&.is-active
+			+opacity(1)
 		h5
 			padding-top: 48px
 			font-size: 36px
@@ -2026,8 +2031,6 @@
 	&__wrapper
 		display: inline-block
 		vertical-align: top
-		// &.is-active
-		// 	margin-top: 100px
 	&__img
 		position: relative
 		width: 750px
@@ -2047,6 +2050,8 @@
 			font-size: 11px
 			color: #292929
 			+unit
+		&.table1
+			opacity: 1
 		&.table2
 			z-index: 2
 			span
@@ -2068,7 +2073,7 @@
 			span
 				top: 140px
 		&.is-active
-			opacity: 1
+			+opacity(1)
 .recognition
 	margin: 0 -60px
 	&__text
@@ -2185,7 +2190,7 @@
 
 .o-top
 	height: 1025px
-	background: url(../img/operation-bg.jpg) center bottom repeat-x
+	background: url(../img/operation-bg.jpg) center bottom no-repeat
 	z-index: 5
 	&__title
 		position: absolute
@@ -2366,7 +2371,7 @@
 	width: 100%
 	position: relative
 	height: 980px
-	background: url("../img/manage-bg.png") center bottom repeat-x
+	background: url("../img/manage-bg.png") center bottom no-repeat
 	&__wrapper
 		width: 100%
 		height: 100%
@@ -2405,21 +2410,30 @@
 					button
 						opacity: 1
 						background: #FFF 
+	&__nav
+		font-size: 0
+		position: absolute
+		bottom: 40px
+		left: 0
+		right: 0
+		li
+			display: inline-block
+			vertical-align: middle
+			a
+				display: block
+				width: 15px
+				height: 14px
+				margin: 0 7px
+				-webkit-border-radius: 50% 
+				border-radius: 50% 
+				background: #7C7C7C 
+				&.is-active
+					background: #FFF
 	.operation__title
 		margin-top: -90px
 		h3
 			padding: 30px 0 23px
-@keyframes range
-	0%
-		top: 0
-	25%
-		top: -5px 
-	50%
-		top: 0
-	75%
-		top: 5px
-	100%
-		top: 0
+
 .analytics
 	&__wrap
 		position: relative
@@ -2458,7 +2472,12 @@
 			&.ui-state-active
 				&:before
 					animation: none
-			
+@keyframes range
+	50%
+		+scale(0.9)
+	100%
+		+scale(1)
+					
 .cms
 	padding-top: 70px
 	.operation__title
