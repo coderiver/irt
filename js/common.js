@@ -141,10 +141,9 @@ head.ready(function() {
 		$(window).scroll(function(){
 			scrollFixedElements()
 		});
-
 		$(window).scroll(function() {
-			parent = $('.t-nav').offset().top;
-			scrollTop = $(window).scrollTop();
+			var parent = $('.t-nav').offset().top,
+				scrollTop = $(window).scrollTop();
 			if (scrollTop > parent) {
 				$('.js-t-nav').addClass('is-active');
 			}
@@ -153,8 +152,8 @@ head.ready(function() {
 			};
 		});
 		$(window).load(function() {
-			parent = $('.t-nav').offset().top;
-			scrollTop = $(window).scrollTop();
+			var parent = $('.t-nav').offset().top,
+				scrollTop = $(window).scrollTop();
 			if (scrollTop > parent) {
 				$('.js-t-nav').addClass('is-active');
 			}
